@@ -1,20 +1,18 @@
 
 
-public class Passenger{
+public class Passenger extends Address {
 
 	
 	public  int mob;
 	public int id;
 	private static int idCounter;
     public String name;
-	public String email,city, state, street;
+	public String email;
 	public Contact contact;
 	
-Address a = new Address("Lucknow", "alambag", "UP");
-	public Passenger(Contact contact,int Id,int idCounter,String city, String state, String street){
-		this.city = a.city;
-		this.state = a.state;
-		this.street = a.Street;
+
+	public Passenger(Contact contact,int Id,int idCounter,String city, String Street, String state){
+		super(city,Street,state);
 		this.mob = contact.mob;
 		this.email = contact.email;
 		this.name = contact.name;
@@ -46,7 +44,7 @@ Address a = new Address("Lucknow", "alambag", "UP");
 	
 
 //	nested class Contact
-      static class Contact {
+	public static class Contact {
 		String email,name;
 		int mob;
 		public Contact(int mob, String email, String name) {

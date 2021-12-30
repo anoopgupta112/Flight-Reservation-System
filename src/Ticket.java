@@ -29,19 +29,31 @@ public class Ticket{
 //	for already register user try this email - defaultuser@gmail.com or defaultuser2@gmail.com
 
 //number, email and name
-	 Passenger.Contact c1 = new Passenger.Contact(53432,"anoopgupta671@gmail.com","anoop");
-	 Passenger.Contact c2 = new Passenger.Contact(53432,"defaultuser@gmail.com","rohit");
 	
+	Passenger.Contact c1 = new Passenger.Contact(53432,"anoopgupta671@gmail.com","anoop");
+    Passenger.Contact c2 = new Passenger.Contact(53432,"defaultuser@gmail.com","rohit");
     
  //Contact, Id, Idcounter, city, state, street
     
-	Passenger p1 = new Passenger(c1, 230,+1,"lucknow","kapurthala","UP");
-	Passenger p2 = new Passenger(c2, 231,+2,"gorakhput","golghar","UP");
-	Passenger p3 = new Passenger(c2, 232,+3,"delhi","karobag","Delhi");
-
+	Passenger p1 = new Passenger(c1, 230,+1,"Lucknow","kapurthala","UP");
+	Passenger p2 = new Passenger(c2, 231,+2,"Delhi","karolbag","Delhi");
+	Passenger p3 = new Passenger(c2, 231,+3,"Gorakhpur","Golghar","UP");
     
 //	TouristTicketInfo---------------------------------
+   public  void TouristTicketInfo()
+{
+	
+	TouristTicket tt = new TouristTicket("Delhi", "karolbaag", "Delhi");
+	System.out.println("City for Tourist: "+tt.city);
+	System.out.println("State for Tourist: "+tt.state);
+	
+	System.out.println("Street for Tourist: "+tt.Street);
+//	tt.UpdateTouristLocation("usa","California","usa");
 
+
+	CommonInfo();
+
+}
 //RegularTicketInfo---------------------------------
 public void RegularTicketInfo() {
 	RegularTicket RT = new RegularTicket(true, true, false);
@@ -85,7 +97,7 @@ public	void PassengerDetail() {
 		System.out.println("passenger Id: " + p1.id);
 		System.out.println("Contact number : " + c1.mob);
 		System.out.println("Contact email : " + c1.email);
-		System.out.println("Passenger Street: "+ p1.street);
+		System.out.println("Passenger Street: "+ p1.Street);
 		System.out.println("Passenger State: "+ p1.state);
 		System.out.println("Passenger city : "+ p1.city);
 
@@ -100,15 +112,17 @@ public	void PassengerDetail() {
 	}
 	
 //	TouristTicket-----------------------------------------
-public class TouristTicket{
+public class TouristTicket extends Address{
 //Add Hotel Address-----------------
 public TouristTicket(String city, String Street, String state) {
-		
+		super(city, Street, state);
 		
 	}
 
 	public void UpdateTouristLocation(String city, String Street, String state) {
-		
+		this.city = city;
+		this.Street = Street;
+		this.state = state;
 	}	
 	
 	
