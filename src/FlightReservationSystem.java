@@ -3,9 +3,9 @@
 import java.util.Scanner;
 
 public class FlightReservationSystem {
-public String name;
-public int num;
-public boolean showDetails;
+private String name;
+private int num;
+private boolean showDetails;
 Flight flight;
 public String AvaiableFlightDetails(){
 
@@ -22,16 +22,46 @@ public String AvaiableFlightDetails(){
     else if(Flight.flightNumber == 322){
     	Flight.flightName = "Random";
      }
+	flight = new Flight(Flight.flightName, Flight.flightNumber);
+	flight = new Flight(Flight.flightName, Flight.flightNumber);
+	flight = new Flight(Flight.flightName, Flight.flightNumber);
+	
+	
+	
+	
 
-	return Flight.flightName;
+	if(Flight.IsAvailable) {
+       setShowDetails(true);
+		return "--------Flight is Available--------------";
+	}
+	else {
+		Flight.flightName = null;
+		Flight.flightNumber = 0;
+		setShowDetails(false);
 	
-	
-	
-
-	
+		return "Flight is unAvailable";
+	}
 	
 }
-
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = Flight.flightName;
+}
+public int getNum() {
+	return num;
+}
+public void setNum(int num) {
+	this.num = Flight.flightNumber;
+}
+public boolean getShowDetails() {
+	return showDetails;
+}
+public void setShowDetails(boolean showDetails) {
+	this.showDetails = showDetails;
+	
+}
 
 
 

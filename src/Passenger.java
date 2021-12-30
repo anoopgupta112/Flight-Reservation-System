@@ -1,29 +1,33 @@
 
 
-
-
-public class Passenger extends Address {
+public class Passenger{
 
 	
 	public  int mob;
 	public int id;
-	
+	private static int idCounter;
     public String name;
-	public String email;
+	public String email,city, state, street;
 	public Contact contact;
 	
-
-	public Passenger(Contact c,int Id,String city, String Street, String state){
-		super(city,Street,state);
-		this.mob = c.mob;
-		this.email = c.email;
-		this.name = c.name;
-	
+Address a = new Address("Lucknow", "alambag", "UP");
+	public Passenger(Contact contact,int Id,int idCounter,String city, String state, String street){
+		this.city = a.city;
+		this.state = a.state;
+		this.street = a.Street;
+		this.mob = contact.mob;
+		this.email = contact.email;
+		this.name = contact.name;
+		Passenger.idCounter = idCounter;
 		
 		this.id = Id;
 		
 	}
-
+	
+	public static int getPassengerCount(){
+		
+		return idCounter;
+	}
 	public boolean checkPassenger() {
 //	     we can also use arraylist here and use -> .add() for new user
 		String[] emails = {"defaultuser@gmail.com","defaultuser2@gmail.com","defaultuser3@gmail.com" };
@@ -41,27 +45,26 @@ public class Passenger extends Address {
 	
 	
 
+//	nested class Contact
+      static class Contact {
+		String email,name;
+		int mob;
+		public Contact(int mob, String email, String name) {
+			this.mob = mob;
+			this.email = email;
+			this.name = name;
+		}
 
-	
-	
-	
-	
-	
-
-	
-
-
-
-
-}
-
- class Contact {
-	String email,name;
-	int mob;
-	public Contact(int mob,String email, String name) {
-		this.mob = mob;
-		this.email = email;
-		this.name = name;
 	}
+	
+	
+	
+	
+	
+
+	
+
+
+
 
 }
