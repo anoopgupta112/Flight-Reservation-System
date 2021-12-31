@@ -3,7 +3,7 @@
 public class Passenger extends Address {
 
 	
-	public  int mob;
+	public  Long mob;
 	public int id;
 	private static int idCounter;
     public String name;
@@ -29,7 +29,7 @@ public class Passenger extends Address {
 	public boolean checkPassenger() {
 //	     we can also use arraylist here and use -> .add() for new user
 		String[] emails = {"defaultuser@gmail.com","defaultuser2@gmail.com","defaultuser3@gmail.com" };
-		for(int i = 0;i <emails.length ; i++) {
+		for(int i = 0;i <emails.length -1; i++) {
 	
 		if(email.equals(emails[i])) {
 			return true;
@@ -45,9 +45,9 @@ public class Passenger extends Address {
 
 //	nested class Contact
 	public static class Contact {
-		String email,name;
-		int mob;
-		public Contact(int mob, String email, String name) {
+		public String email,name;
+		public Long mob;
+		public Contact(Long mob, String email, String name) {
 			this.mob = mob;
 			this.email = email;
 			this.name = name;

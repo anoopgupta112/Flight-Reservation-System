@@ -14,8 +14,13 @@ public class Main {
 		
 		if(checkFlight.getShowDetails()) {
 			 //flightDetails, PNR, sheatNum, FlightNum, departure, destination, price
-			Ticket ticket = new Ticket(flightDetails,1234567890, 32, "Delhi", "Lucknow", 3000,"31/12/2021","12:30 pm");
-//			ticket.RegularTicketInfo();
+			
+			Ticket ticket = new Ticket(flightDetails, 32, "Delhi", "Lucknow", 3000,"31/12/2021","12:30 pm");
+		    System.out.println("///////////////////////--- Regular Ticket ---- //////////////////////////");
+			ticket.RegularTicketInfo();
+            System.out.println();
+            System.out.println("//////////////////////-- Tourist Ticket --//////////////////////////");
+            
 			ticket.TouristTicketInfo();
 			
 		}
