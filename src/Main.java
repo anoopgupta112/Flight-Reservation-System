@@ -2,12 +2,10 @@
 
 public class Main {
 	public static void main(String[] args) {
-		
-//		flightName, flightNum
-		
-		
+	
 		System.out.println("Enter Flight Number here (Try-173,132 or 322) : ");
 		FlightReservationSystem checkFlight =new  FlightReservationSystem();
+//		flightName, flightNum
 		Flight flightDetails = new Flight(checkFlight.getName(), checkFlight.getNum());
 		
 		System.out.println(checkFlight.AvaiableFlightDetails());
@@ -25,15 +23,7 @@ public class Main {
 			
 		}
 
-		
-		
-		
-
-		
-		
-	
 	}
 
-	
 
 }

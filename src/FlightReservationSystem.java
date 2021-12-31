@@ -9,9 +9,7 @@ private boolean showDetails;
 Flight flight;
 public String AvaiableFlightDetails(){
 
-	
-
-	Scanner sc = new Scanner(System.in);
+   Scanner sc = new Scanner(System.in);
 	Flight.flightNumber = sc.nextInt();
 	if(Flight.flightNumber == 132) {
 		Flight.flightName = "Air India";

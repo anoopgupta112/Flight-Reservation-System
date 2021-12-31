@@ -1,6 +1,6 @@
 
 
-public class Passenger extends Address {
+ class Passenger extends Address {
 
 	
 	public  Long mob;
@@ -44,7 +44,7 @@ public class Passenger extends Address {
 	
 
 //	nested class Contact
-	public static class Contact {
+static class Contact {
 		public String email,name;
 		public Long mob;
 		public Contact(Long mob, String email, String name) {

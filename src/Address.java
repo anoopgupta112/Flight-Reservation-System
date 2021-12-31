@@ -1,14 +1,12 @@
 
 
-public class Address {
+abstract class Address {
 
 	
 	public String city;
 	String Street;
 	String state;
-	
-	
-	
+
 	public Address(String city,String Street, String state){
 		this.city = city;
 		this.state = state;
